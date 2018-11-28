@@ -1,17 +1,31 @@
 var name = prompt("What is your name?");
 
-var nameAlert = alert("Hi " + name + ", lets try and survive. Here's how your day is going to start...");
+var nameAlert = alert("Hi " + name + ", lets play this amazing game. Here's how your day is going to start...");
 
-var scenarioOneAlert = alert("You really aren't awake yet. You never are until at least your second cup of coffee, and this is only your first. You're having a hard time getting your eyes to focus.")
+var scenarioOneAlert = alert("You have a choice of two doors.");
 
-var decisionOne = prompt("What do you do? A - Get up and wash your face. B - Go back to sleep. C - Have your second cup of coffee");
+var decisionOne = prompt("Do you want to enter door 1 or door 2?");
 
-// if ("Get up and wash your face") {
-//   alert("You have entered the bathroom");
-// } else if ("Go back to sleep") {
+if (decisionOne === "door 1" || "Door 2") {
 
-//   alert("You are asleep");
+  confirm("Behind door 1 is a another two doors. The left door has a few scratch marks on it and the right door has blood on it.")
+  var decisionTwo = prompt("Which door do you want to go through? Left or Right? ");
+  if (decisionTwo = "left" || "Left") {
+    confirm("You have entered the left door.");
+    confirm("You find more scratches along the side of the wall")
+    confirm("There are two more doors to your left and right. The left is open and the right is closed.")
+    var decisionTwoA = prompt("What door do you want to enter?")
+    if (decisionTwoA = "left") {
 
-// } else ("Have your second cup of coffee"); {
-//   alert("You have entered your kitchen");
-// }
+    } else if (decisionTwoA = "right") {
+
+    }
+  } else if (decisionTwo = "right" || "Right") {
+    confirm("You have entered the right door.");
+  }
+  // game over if you enter door 2 straight away
+} else if (decisionOne === "door 2" || "Door 2") {
+
+  confirm("Oh no " + name + " you have been bombarded by 6 zombies... GAME OVER!");
+
+} 
